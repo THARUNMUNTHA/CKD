@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">  
+
+</head>
+<body background="https://www.dpcedcenter.org/wp-content/uploads/2013/01/Human-kidney-on-scientific-background-1090830664_3600x2400.jpeg" style="text-align: center; background-size: 100%;">
+<div style="color:black;" class="container">
+<h1 class='container-heading'><span class="heading_font">Chronic Kidney Disease Prediction</span></h1>
+</div>
+<div style="color:black;" class="ml-container">
+<form action="{{ url_for('predict') }}" method="POST">
+<br><br>
+<h3>Age</h3>
+<input id="first" name="age" placeholder="Enter age" required="required"><br>
+
+<h3>Blood Pressure</h3>
+<input id="second" name="bp" placeholder="Enter bp" required="required"><br>
+
+<h3>Specific Gravity</h3>
+<input id="third" name="sg" placeholder="Ex: (1.005,1.010,1.015,1.020,1.025)" required="required"><br>
+
+<h3>Albumin</h3>
+<input id="fourth" name="al" placeholder="(0,1,2,3,4,5)" required="required"><br>
+
+<h3>Sugar</h3>
+<input id="fifth" name="su" placeholder="Enter sugar level" required="required"><br>
+
+<h3>Red Blood Cells</h3>
+<input id="sixth" name="rbc" placeholder="in Millions/cmm" required="required"><br>
+
+<h3>Pus Cell</h3>
+<input id="seventh" name="pc" placeholder="Normal = 0, Abnormal = 1" required="required"><br>
+
+<h3>Pus Cell clumps</h3>
+<input id="eighth" name="pcc" placeholder="Enter Pus Cell clumps" required="required"><br>
+
+<h3>Bacteria</h3>
+<input id="ninth" name="ba" placeholder="Enter here" required="required"><br>
+
+<h3>Blood Glucose random</h3>
+<input id="tenth" name="bgr" placeholder="Enter Here" required="required"><br>
+
+<h3>Blood Urea</h3>
+<input id="eleventh" name="bu" placeholder="Enter here" required="required"><br>
+
+<h3>Serum Creatinine</h3>
+<input id="twelve" name="sc" placeholder="Enter here" required="required"><br>
+
+<h3>Sodium</h3>
+<input id="thirteen" name="sod" placeholder="Enter here" required="required"><br>
+
+<h3>Potassium</h3>
+<input id="fourteen" name="pot" placeholder="Enter here" required="required"><br>
+
+<h3>Hemoglobin</h3>
+<input id="fifteen" name="hemo" placeholder="in gms" required="required"><br>
+
+<h3>Packed Cell Volume</h3>
+<input id="sixteen" name="pcv" placeholder="Enter here" required="required"><br>
+
+<h3>White Blood Cell Count</h3>
+<input id="seventeen" name="wc" placeholder="Enter here" required="required"><br>
+
+<h3>Red Blood Cell Count</h3>
+<input id="eighteen" name="rc" placeholder="Enter here" required="required"><br>
+
+<h3>Hyper tensiont</h3>
+<input id="nineteen" name="htn" placeholder="Enter here" required="required"><br>
+
+<h3>Diabetes Mellitus</h3>
+<input id="twenty" name="dm" placeholder="Yes = 1, No=0" required="required">
+<br>
+
+<h3>Coronary Artery Disease</h3>
+<input id="twentyone" name="cad" placeholder="Enter here" required="required"><br>
+
+<h3>Appetite</h3>
+<input id="twentytwo" name="appet" placeholder="Good = 1, Poor = 0" required="required">
+<br>
+
+<h3>Peda edema</h3>
+<input id="twentythree" name="pe" placeholder="Enter here" required="required"><br>
+
+<h3>Anemia</h3>
+<input id="twentyfour" name="ane" placeholder="Enter here" required="required"><br>
+
+<h3></h3>
+<br><br><br>
+<button id="sub" type="submit ">Submit</button>
+<br><br><br><br>
+<a href="comp.html">comp</a>
+
+</form>
+</div>
+<style>
+/* Background Image */
+
+/* Color */
+
+/* Heading Font */
+.container-heading{
+margin: 0;
+}
+
+/* Box */
+#first {
+border-radius: 14px;
+height: 30px;
+width: 300px;
+font-size: 18px;text-align: center;
+}
+#second {
+border-radius: 14px;
+height: 25px;
+width: 160px;
+font-size: 20px;
+text-align: center;
+}
+#third {
+border-radius: 14px;
+height: 25px;
+width: 120px;
+font-size: 20px;
+text-align: center
+}
+#fourth {
+border-radius: 14px;
+height: 25px;
+width: 160px;
+font-size: 20px;
+text-align: center;
+}#fifth {
+border-radius: 14px;
+height: 25px;
+width: 130px;
+font-size: 20px;
+text-align: center;
+}
+#sixth {
+border-radius: 14px;
+height: 25px;
+width: 200px;
+font-size: 20px;
+text-align: center;
+}
+#seventh {
+border-radius: 14px;
+height: 25px;
+width: 180px;
+font-size: 20px;
+text-align: center;
+}
+#eighth {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#ninth {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+
+#tenth {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#eleventh {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#twelve {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#thirteen {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#fourteen {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#fifteen {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#sixteen {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#seventeen {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#eighteen {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#nineteen {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#twenty {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#twentyone {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#twentytwo {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#twentythree {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+#twentyfour {
+border-radius: 14px;
+height: 25px;
+width: 260px;
+font-size: 20px;
+text-align: center;
+}
+/* Submit Button */
+#sub {
+width: 120px;
+height: 43px;
+text-align: center;
+border-radius: 14px;
+font-size: 18px;
+}
+</style>
+</body>
+</html>
