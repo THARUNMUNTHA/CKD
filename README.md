@@ -1,2 +1,2 @@
 # CKD
-Chronic Kidney Disease Predictiom Using Machine Learning Algorithm
+Chronic Kidney Disease Prediction Using Machine Learning Algorithm
